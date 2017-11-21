@@ -10,12 +10,5 @@ h2 Lighthouse
 - var lighthouseSummary = pageInfo.data.lighthouse.pageSummary
 
 h3 Performance metrics
-.responsive
-  table
-    thead
-      tr
-        th(colspan='2') Resources
-      each metric,metric_name in lighthouseSummary
-        tr
-          td #{metric_name}
-          +numberCell('', metric.median)
+
+p #{JSON.stringify(lighthouseSummary)}
